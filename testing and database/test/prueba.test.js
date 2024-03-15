@@ -53,7 +53,6 @@ describe('carrito compra', () => {
             compra.agregarProducto(producto3);
             const producto4 = new Producto("cable", 20);
             compra.agregarProducto(producto4);
-
             expect(compra.aplicarDescuento(10)).toBe(45);
         })
     })

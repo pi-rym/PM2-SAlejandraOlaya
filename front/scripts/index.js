@@ -6,6 +6,7 @@ async function init() {
         const response = await axios.get('http://localhost:3000/movies');
 
         response.data.forEach(movie => {
+            console.log({movie})
             const cardContainer = createElement('div', 'col-3');
             const card = createElement('div', 'card');
 
@@ -23,7 +24,7 @@ async function init() {
             directorDiv.innerHTML = `Director: ${movie.director}`
 
             const genresDiv = createElement('div', 'card-text')
-            genresDiv.innerHTML = `Genres: ${movie.genre.join(', ')}`
+            genresDiv.innerHTML = `Genres: ${movie.genres.join(', ')}`
 
             const rateDiv = createElement('div', 'card-text')
             rateDiv.innerHTML = `Rate: ${movie.rate}`
@@ -43,6 +44,7 @@ async function init() {
             card.appendChild(cardBody);
             cardContainer.appendChild(card);
             const moviesContainer = document.getElementById('movies')
+            console.log({cardContainer})
             moviesContainer.appendChild(cardContainer);
         });
     } catch (error) {

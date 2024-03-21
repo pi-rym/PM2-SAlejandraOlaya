@@ -1,4 +1,23 @@
-.miImagen {
-    border-radius: 10px;
-  
+
+.container-1 {
+  border: 2px solid black; 
+  padding: 30px;
+  margin-top: 20px;
+  margin-inline-start: 30px;
+  margin-inline-end: 30px;
 }
+.card {
+  margin-bottom: 20px; 
+  background-color: #67747e; 
+  color: white; 
+  display: flex;
+  flex-direction: column;
+ 
+}
+.card-img-top {
+  width: 100%; 
+  height: auto; 
+}
+.card:hover {
+    background-color: #3b6fa2; 
+  }

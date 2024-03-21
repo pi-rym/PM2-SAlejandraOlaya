@@ -8,6 +8,6 @@ dbCon().then((res) => {
 }).catch((err) => {
     console.log('Fallo en la conexion', err.message)
 
-})
+});
 
 
